@@ -1,27 +1,17 @@
+[![GTA 6 Trophy Guide — make.fun](https://make.fun/badge/gta6-trophy-guide-01.svg)](https://make.fun/c/gta6-trophy-guide-01)
+[![Rank](https://make.fun/badge/gta6-trophy-guide-01/4Quaranz/gta6-trophy-guide-01/rank.svg)](https://make.fun/c/gta6-trophy-guide-01)
+[![Reward](https://make.fun/badge/gta6-trophy-guide-01/4Quaranz/gta6-trophy-guide-01/reward.svg)](https://make.fun/c/gta6-trophy-guide-01)
+
 # Leonida Ledger — GTA 6 Trophy Guide & Tracker
 
-[![Trophy Guide](https://make.fun/badge/gta6-trophy-guide-01.svg)](https://make.fun/bounty/gta6-trophy-guide-01)
-[![Rank](https://make.fun/badge/gta6-trophy-guide-01/4Quaranz/gta6-trophy-guide-01/rank.svg)](https://make.fun/bounty/gta6-trophy-guide-01)
-[![Reward](https://make.fun/badge/gta6-trophy-guide-01/4Quaranz/gta6-trophy-guide-01/reward.svg)](https://make.fun/bounty/gta6-trophy-guide-01)
+An offline guide and tracker for all **55 PlayStation 5 trophies** of Grand Theft Auto VI: every trophy with its official name, description and grade, a checklist saved in the browser, export and import, filters by kind, a spoiler setting, a roadmap to the platinum, and the missable trophies flagged — with every guide in our own words and citing its sources.
 
-An offline guide and tracker for all **55 PlayStation 5 trophies** of Grand Theft Auto VI — built for the [gta6-trophy-guide-01](https://make.fun/bounty/gta6-trophy-guide-01) bounty on make.fun.
-
-## What it is
-
-- **Checklist** of every official trophy with its official name, description and grade (1 platinum, 2 gold, 6 silver, 46 bronze), saved in the browser with export and import.
-- **Filters** by kind — story, missable, collectibles, activities, strangers, money, moments — plus search and earned / still-to-earn views.
-- **Spoiler setting** that hides the names and descriptions of hidden story trophies until you earn them.
-- **Roadmap to the platinum** in four stages, built from the official trophy descriptions.
-- **Missable flags** on the 11 trophies tied to a single story moment or one-time event, each with its own note.
-- **A guide for every trophy** in our own words, each naming its sources.
-
-## Files
-
-- `app/index.html` — the shell: header with progress, tabs, toolbar, checklist and guide pane.
-- `app/js/main.js` — boot, routing and toolbar wiring; `app/js/store.js` — localStorage progress, export and import; `app/js/views.js` — checklist, detail, roadmap, missables and about rendering; `app/js/data.js` — filters and the four-stage roadmap.
-- `app/data/trophies.json` — the 55 official trophies with our own guide and sources for each.
-- `app/css/style.css` — the night theme, system fonts only.
-- `main.ts` — the hand-in program; `serve.ts` — a tiny local static server for trying the guide.
+- **Tracker:** checklist of all 55 trophies saved in localStorage, per-trophy progress counters against PSN's tracked goals (for example 0/42 Shooting Range challenges), personal notes, export to JSON and import back.
+- **Filters:** by kind (story, collectibles, activities, missable, online, platinum), by grade, by earned status, plus search and sorting.
+- **Spoiler-free mode:** hides story trophy names and descriptions until they are earned.
+- **Roadmap:** three steps to the platinum — story (60–80 hours), the 100% checklist (about 100 hours), cleanup (about 10 hours) — about 200 hours in total, one playthrough, no online trophies.
+- **Missables:** the one possibly missable trophy (Positive Mental Attitude) flagged with its Chapter 1 warning; everything else is safe to earn any time.
+- **Sources:** every guide cites Exophase, PSNProfiles, PowerPyx and CryptoGames (GTABase / PowerPyx). Where the published guides have not confirmed a step yet, the guide says so instead of guessing.
 
 ## Run it
 
@@ -29,7 +19,7 @@ An offline guide and tracker for all **55 PlayStation 5 trophies** of Grand Thef
 node serve.ts
 ```
 
-Then open <http://localhost:8080>. It is plain static files under `app/` — no build step, no network request, system fonts only. It works with the network off.
+Then open http://localhost:8080. No build step, no network: every file the app loads is under `app/`.
 
 ## Hand it in
 
@@ -37,18 +27,14 @@ Then open <http://localhost:8080>. It is plain static files under `app/` — no 
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
-`main.ts` (Node 22) copies `app/` and `screenshots/` to the output directory and writes `dossier.json` with the kit's `vendor/makefun-frontend.ts`. Running it twice writes byte-identical output.
+That copies `app/` and `screenshots/` to `out/` and writes `out/dossier.json`.
 
-## Sources
+## Verification
 
-- Trophy names, descriptions, grades and hidden flags: the official list on Exophase, read 19 November 2026.
-- PSN progress counts (42 Shooting Range challenges, 14 drone race locations, 18 meditation spots, 52 areas, 9 gangs, 8 garages): PSNProfiles.
-- Every guide is our own advice, read from the official descriptions. GTA 6 released 19 November 2026, so where an exact in-game spot is not yet verified, the guide says so instead of inventing one.
+List verified 2026-11-20 against Exophase and PSNProfiles (names, descriptions, grades and PSN counts agree): 55 trophies — 1 platinum, 2 gold, 6 silver, 46 bronze; 28 hidden on PlayStation; no online trophies.
 
-## Not affiliated
-
-An unofficial, fan-made guide. Not affiliated with Rockstar Games, Take-Two Interactive or PlayStation. No Rockstar logo, official artwork, box art or game screenshot is used — the look is our own.
+Referral code: `scveefga`
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT — see [LICENSE](LICENSE). Unofficial fan-made guide, not affiliated with Rockstar Games, Sony or PlayStation. No Rockstar artwork, logos or screenshots are used.
